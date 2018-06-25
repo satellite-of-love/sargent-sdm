@@ -82,7 +82,7 @@ export function additiveCloudFoundryMachine(configuration: SoftwareDeliveryMachi
     return sdm;
 }
 
-hello compile ivy
+hello compile errors
 
 export function codeRules(sdm: SoftwareDeliveryMachine) {
     // Each contributor contributes goals. The infrastructure assembles them into a goal set.
