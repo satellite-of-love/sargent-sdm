@@ -82,6 +82,8 @@ export function additiveCloudFoundryMachine(configuration: SoftwareDeliveryMachi
     return sdm;
 }
 
+hello compile errors
+
 export function codeRules(sdm: SoftwareDeliveryMachine) {
     // Each contributor contributes goals. The infrastructure assembles them into a goal set.
     sdm.addGoalContributions(goalContributors(
@@ -128,7 +130,7 @@ export function deployRules(sdm: SoftwareDeliveryMachine) {
                     deployer: LocalExecutableJarDeployer,
                     targeter: ManagedDeploymentTargeter,
                 },
-            ),
+        ),
         deploy.when(IsMaven)
             .deployTo(ProductionDeploymentGoal, ProductionEndpointGoal, ProductionUndeploymentGoal)
             .using(cloudFoundryProductionDeploySpec(sdm.configuration.sdm)),
@@ -144,7 +146,7 @@ export function deployRules(sdm: SoftwareDeliveryMachine) {
             enableDeploy,
             disableDeploy,
             isDeployEnabledCommand,
-        )
+    )
         .addPushReactions(EnableDeployOnCloudFoundryManifestAddition)
         .addEndpointVerificationListeners(lookFor200OnEndpointRootGet());
     addTeamPolicies(sdm);
